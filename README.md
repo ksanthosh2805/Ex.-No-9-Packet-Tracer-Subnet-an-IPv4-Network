@@ -28,12 +28,14 @@ Design, configure, and verify an IPv4 subnetting scheme in Cisco Packet Tracer.<
 
 <br>
 
-## Addressing Table
+## Subnetting Table
 
 | Subnet     | Network ID   | First Usable Address | Last Usable Address | Broadcast Address | Prefix | Subnet Mask     | 
 |------------|--------------|----------------------|---------------------|-------------------|--------|-----------------|
 | **LAN-A**  | 192.168.0.0  | 192.168.0.1          | 192.168.0.62        | 192.168.0.63      | /26    |255.255.255.192  |
 | **LAN-B**  | 192.168.0.64 | 192.168.0.65         | 192.168.0.126       | 192.168.0.127     | /26    |255.255.255.192  |
+
+## Addressing Table
 
 | Device         |	Interface |	IP Address                                |	Subnet Mask	    | Default Gateway     |
 | ---------------|------------|-------------------------------------------|-----------------|---------------------|
@@ -50,7 +52,7 @@ Design, configure, and verify an IPv4 subnetting scheme in Cisco Packet Tracer.<
 | **ISP Workstation** |	NIC       |	209.165.200.235                           |	255.255.255.224 |	209.165.200.225     |
 | *ISP Server**     |	NIC       |	209.165.200.240                           |	255.255.255.224 |	209.165.200.225     |
 
-(LAN-A and LAN-B IPs to be filled with subnetting calculation.)
+(LAN-A and LAN-B IPs to be filled with subnetting calculation in subnetting table.)
 
 <br>
 
