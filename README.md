@@ -23,24 +23,35 @@ Design, configure, and verify an IPv4 subnetting scheme in Cisco Packet Tracer.<
 <br>
 
 ## Network Topology Diagram
-(Insert your Packet Tracer screenshot showing CustomerRouter → LAN-A Switch → PC-A, CustomerRouter → LAN-B Switch → PC-B, and ISP side with Router, Switch, Workstation, Server, and Serial link.)<br>
+
+<img width="831" height="268" alt="image" src="https://github.com/user-attachments/assets/6b54bfb0-5937-43bf-83d9-4feb25c4c9c3" />
+
 <br>
 
 ## Addressing Table
-Device	Interface	IP Address	Subnet Mask	Default Gateway<br>
-CustomerRouter	G0/0	(1st host of LAN-A subnet)	(Subnet mask)	N/A<br>
-CustomerRouter	G0/1	(1st host of LAN-B subnet)	(Subnet mask)	N/A<br>
-CustomerRouter	S0/1/0	209.165.201.2	255.255.255.252	N/A<br>
-LAN-A Switch	VLAN1	(2nd host of LAN-A subnet)	(Subnet mask)	CustomerRouter G0/0<br>
-LAN-B Switch	VLAN1	(2nd host of LAN-B subnet)	(Subnet mask)	CustomerRouter G0/1<br>
-PC-A	NIC	(Last host of LAN-A subnet)	(Subnet mask)	CustomerRouter G0/0<br>
-PC-B	NIC	(Last host of LAN-B subnet)	(Subnet mask)	CustomerRouter G0/1<br>
-ISP Router	G0/0	209.165.200.225	255.255.255.224	N/A<br>
-ISP Router	S0/1/0	209.165.201.1	255.255.255.252	N/A<br>
-ISP Switch	VLAN1	209.165.200.226	255.255.255.224	209.165.200.225<br>
-ISP Workstation	NIC	209.165.200.235	255.255.255.224	209.165.200.225<br>
-ISP Server	NIC	209.165.200.240	255.255.255.224	209.165.200.225<br>
-(LAN-A and LAN-B IPs to be filled in after subnetting calculation.)<br>
+
+| Subnet     | Network ID   | First Usable Address | Last Usable Address | Broadcast Address | Prefix | Subnet Mask     | 
+|------------|--------------|----------------------|---------------------|-------------------|--------|-----------------|
+| **LAN-A**  | 192.168.0.0  | 192.168.0.1          | 192.168.0.62        | 192.168.0.63      | /26    |255.255.255.192  |
+| **LAN-B**  | 192.168.0.64 | 192.168.0.65         | 192.168.0.126       | 192.168.0.127     | /26    |255.255.255.192  |
+
+| Device         |	Interface |	IP Address                                |	Subnet Mask	    | Default Gateway     |
+| ---------------|------------|-------------------------------------------|-----------------|---------------------|
+| **CustomerRouter** | G0/0	      | 192.168.0.1 (1st host of LAN-A subnet)    |	255.255.255.192	| N/A                 |
+| **CustomerRouter** | G0/1       |	192.168.0.65 (1st host of LAN-B subnet)   | 255.255.255.192 |	N/A                 |
+| **CustomerRouter** | S0/1/0     |	209.165.201.2                             |	255.255.255.252 |	N/A                 |
+| **LAN-A Switch**   | VLAN1      |	192.168.0.2 (2nd host of LAN-A subnet)    |	255.255.255.192 |	CustomerRouter G0/0 |
+| **LAN-B Switch**	 | VLAN1      |	192.168.0.66 (2nd host of LAN-B subnet)   |	255.255.255.192 |	CustomerRouter G0/1 |
+| **PC-A**           | NIC        |	192.168.0.62 (Last host of LAN-A subnet)  |	255.255.255.192 |	CustomerRouter G0/0 |
+| **PC-B**           | NIC        |	192.168.0.126(Last host of LAN-B subnet)  |	255.255.255.192 |	CustomerRouter G0/1 |
+| **ISP Router**     | G0/0       |	209.165.200.225                           |	255.255.255.224 |	N/A                 |
+| **ISP Router**     | S0/1/0     |	209.165.201.1                             |	255.255.255.252 |	N/A                 |
+| **ISP Switch**     | VLAN1      |	209.165.200.226                           |	255.255.255.224	| 209.165.200.225     |
+| **ISP Workstation** |	NIC       |	209.165.200.235                           |	255.255.255.224 |	209.165.200.225     |
+| *ISP Server**     |	NIC       |	209.165.200.240                           |	255.255.255.224 |	209.165.200.225     |
+
+(LAN-A and LAN-B IPs to be filled with subnetting calculation.)
+
 <br>
 
 ## Procedure
