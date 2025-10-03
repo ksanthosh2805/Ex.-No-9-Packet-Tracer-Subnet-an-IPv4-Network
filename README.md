@@ -50,7 +50,7 @@ Design, configure, and verify an IPv4 subnetting scheme in Cisco Packet Tracer.<
 | **ISP Router**     | S0/1/0     |	209.165.201.1                             |	255.255.255.252 |	N/A                 |
 | **ISP Switch**     | VLAN1      |	209.165.200.226                           |	255.255.255.224	| 209.165.200.225     |
 | **ISP Workstation** |	NIC       |	209.165.200.235                           |	255.255.255.224 |	209.165.200.225     |
-| *ISP Server**     |	NIC       |	209.165.200.240                           |	255.255.255.224 |	209.165.200.225     |
+| **ISP Server**     |	NIC       |	209.165.200.240                           |	255.255.255.224 |	209.165.200.225     |
 
 (LAN-A and LAN-B IPs to be filled with subnetting calculation in subnetting table.)
 
